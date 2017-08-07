@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Bestellung bestelldatum="2000-05-10">
+    <Lieferadresse land="DE">
+        <Name>Alice Schmid</Name>
+        <Straße>Walnussgasse 42</Straße>
+        <Ort>Frankfurt/Main</Ort>
+        <PLZ>60000</PLZ>
+    </Lieferadresse>
+    <Rechnungsadresse land="DE">
+        <Name>Robert Schmid</Name>
+        <Straße>Haselnussweg 3</Straße>
+        <Ort>Frankfurt/Main</Ort>
+        <PLZ>61240</PLZ>
+    </Rechnungsadresse>
+    <Kommentar>Bitte mit Geschenkverpackung!</Kommentar>
+    <Waren>
+        <Buch ISBN="3776622148">
+        <Titel>Vom Glück der Faulheit. Lebensenergie richtig einteilen.</Titel>
+        <Anzahl>1</Anzahl>
+        <PreisEUR>29.90</PreisEUR>
+        <Kommentar>Bitte Liefertermin bis Weihnachten bestätigen.</Kommentar>
+        </Buch>
+        <Buch ISBN="3551551677">
+        <Titel>Harry Potter und der Stein der Weisen</Titel>
+        <Anzahl>1</Anzahl>
+        <PreisEUR>29.90</PreisEUR>
+        <Lieferdatum>2000-01-04</Lieferdatum>
+        </Buch>
+    </Waren>
+</Bestellung>

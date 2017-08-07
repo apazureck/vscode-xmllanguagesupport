@@ -1,0 +1,124 @@
+{
+    "name": "xml-languageservice",
+    "displayName": "XML Language Service",
+    "license": "MIT",
+    "description": "Provides autocomplete and linting using xsd files",
+    "version": "0.1.0",
+    "versvsce publishion": "0.1.0",
+    "publisher": "apazureck",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "author": {
+        "name": "Andreas Pazureck",
+        "email": "andreas@pazureck.de",
+        "url": "www.pazureck.de"
+    },
+    "icon": "img/OpenUI5_logo.png",
+    "categories": [
+        "Languages",
+        "Linters"
+    ],
+    "activationEvents": [
+        "onLanguage:xml"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "jsonValidation": [{
+            "fileMatch": "manifest.json",
+            "url": "./jsonschemas/manifest.schema.json"
+        }],
+        "commands": [{
+            "category": "XML",
+            "command": "ui5ts.AddSchemaToStorage",
+            "title": "Add XSD Schema(s) To Storage"
+        }],
+        "configuration": {
+            "title": "Settings for UI5 Typescript extension",
+            "properties": {
+                "xml.languagserver.LogLevel": {
+                    "type": "number",
+                    "default": 4,
+                    "description": "Loglevel of the XML language server. Debug: 0, Information: 1, Warning: 2, Error: 3, None, 4. A low loglevel may cause language server to slow down.",
+                    "oneOf": [{
+                            "description": "Debug",
+                            "enum": [
+                                0
+                            ]
+                        },
+                        {
+                            "description": "Information",
+                            "enum": [
+                                1
+                            ]
+                        },
+                        {
+                            "description": "Warning",
+                            "enum": [
+                                2
+                            ]
+                        },
+                        {
+                            "description": "Error",
+                            "enum": [
+                                3
+                            ]
+                        },
+                        {
+                            "description": "None",
+                            "enum": [
+                                4
+                            ]
+                        }
+                    ]
+                },
+                "xml.languageserver.include": {
+                    "description": "Files to include in search for local schemas in workspace. Use glob patterns, but no ignore pattern with !. Use xml.languageserver.exclude to ignore files",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "^[^!].*"
+                    },
+                    "default": ["**/*.xsd"]
+                },
+                "xml.languageserver.exclude": {
+                    "description": "Files to exclude in search for local schemas. Use glob patterns",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": []
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/fs-finder": "^1.8.28",
+        "@types/glob": "^5.0.30",
+        "@types/mocha": "^2.2.41",
+        "@types/node": "^8.0.15",
+        "gulp": "^3.9.1",
+        "gulp-util": "^3.0.8",
+        "gulpclass": "^0.1.2",
+        "mocha": "^3.4.2",
+        "run-sequence": "^2.0.0",
+        "vscode": "^1.1.4"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^3.3.0",
+        "path": "^0.12.7"
+    },
+    "bugs": {
+        "url": "https://github.com/apazureck/vscode-xmllanguagesupport/issues"
+    },
+    "repository": {
+        "url": "https://github.com/apazureck/vscode-xmllanguagesupport.git",
+        "type": "git"
+    },
+    "preview": true
+}

@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "lib": ["es6"],
+        "outDir": "out",
+        "experimentalDecorators": true,
+        "watch": true,
+        "rootDirs": ["test", "src"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "test",
+        "src"
+    ]
+}
