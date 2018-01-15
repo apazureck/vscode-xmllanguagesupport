@@ -1,4 +1,4 @@
-import { IElement } from '../Element';
+import { IElement } from "../Element";
 export interface IXsdDiagnostic {
     errorCode: XsdDiagnosticCode;
     message: string;
@@ -6,27 +6,16 @@ export interface IXsdDiagnostic {
     type: IXsdType;
 }
 
-export class SchemaError extends Error {
-    constructor(message?: string) {
-        super(message);
-    }
-}
-
-export class ElementError extends SchemaError {
-    constructor(public readonly source: IElement, message?: string) {
-        super(message);
-    }
-}
-
-export class XsdDiagnostic implements IXsdDiagnostic {
-    constructor(public readonly errorCode: XsdDiagnosticCode, public readonly message: string, public readonly element: IElement, public readonly type: IXsdType) {
-    }
-}
-
 export enum XsdDiagnosticCode {
     Unknown,
     SequenceWrongElement,
     SequenceUnknownType,
+    UnallowedCharacter,
+    DateIsNotValid,
+    SimpleTypeUnknown,
+    DecimalNotValid,
+    BooleanNotValid,
+    TimeInvalid,
 }
 
 export interface IXsdBase {

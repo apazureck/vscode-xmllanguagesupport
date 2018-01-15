@@ -1,0 +1,13 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.pazureck.de/SimpleSchema" version="1.0" xml:lang="EN" elementFormDefault="qualified">
+    <xsd:element name="base">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:sequence>
+                    <xsd:element name="lastname" type="xsd:string"/>
+                    <xsd:element name="age" type="xsd:integer"/>
+                    <xsd:element name="dateborn" type="xsd:date"/>
+                </xsd:sequence>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

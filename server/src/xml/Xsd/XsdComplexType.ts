@@ -1,5 +1,6 @@
 import { IElement } from "../Element";
-import { ElementError, IXsdCheckable, IXsdDiagnostic, IXsdType, noComplexTypeMessage, noElementMessage } from "./Xsd";
+import { ElementError } from "./SchemaError";
+import { IXsdCheckable, IXsdDiagnostic, IXsdType, noComplexTypeMessage, noElementMessage } from "./Xsd";
 import { XsdSequence } from "./XsdSequence";
 export class XsdComplexType implements IXsdType {
     public raw: IElement;

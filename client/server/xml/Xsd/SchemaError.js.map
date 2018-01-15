@@ -1,0 +1,1 @@
+{"version":3,"file":"SchemaError.js","sourceRoot":"","sources":["../../../../server/src/xml/Xsd/SchemaError.ts"],"names":[],"mappings":";;AACA,iBAAyB,SAAQ,KAAK;IAClC,YAAY,OAAgB;QACxB,KAAK,CAAC,OAAO,CAAC,CAAC;IACnB,CAAC;CACJ;AAJD,kCAIC;AAED,kBAA0B,SAAQ,WAAW;IACzC,YAA4B,MAAgB,EAAE,OAAgB;QAC1D,KAAK,CAAC,OAAO,CAAC,CAAC;QADS,WAAM,GAAN,MAAM,CAAU;IAE5C,CAAC;CACJ;AAJD,oCAIC"}

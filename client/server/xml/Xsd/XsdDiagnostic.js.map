@@ -1,0 +1,1 @@
+{"version":3,"file":"XsdDiagnostic.js","sourceRoot":"","sources":["../../../../server/src/xml/Xsd/XsdDiagnostic.ts"],"names":[],"mappings":";;AAEA;IACI,YAA4B,SAA4B,EAAkB,OAAe,EAAkB,OAAiB,EAAkB,IAAc;QAAhI,cAAS,GAAT,SAAS,CAAmB;QAAkB,YAAO,GAAP,OAAO,CAAQ;QAAkB,YAAO,GAAP,OAAO,CAAU;QAAkB,SAAI,GAAJ,IAAI,CAAU;IAC5J,CAAC;CACJ;AAHD,sCAGC"}

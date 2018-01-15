@@ -1,6 +1,6 @@
-import { IXsdType } from './XsdSchema';
 import { Attribute, IAttribute } from "./Attribute";
 import { IFoundResult, IXmlBase, URI } from "./base";
+import { IXsdType } from "./Xsd/Xsd";
 /**
  * Represents an XML Element
  *

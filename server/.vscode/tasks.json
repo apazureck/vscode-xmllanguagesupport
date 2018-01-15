@@ -21,7 +21,7 @@
         "showOutput": "silent",
 
         // we run the custom script "compile" as defined in package.json
-        "args": ["run", "compile", "--loglevel", "silent"],
+        "args": ["run", "watch", "--loglevel", "silent"],
 
         // The tsc compiler is started in watching mode
         "isBackground": true,
@@ -48,7 +48,8 @@
 
         // use the standard tsc in watch mode problem matcher to find compile problems in the output.
         "problemMatcher": "$tsc-watch",
-        "isTestCommand": true
+        "isTestCommand": true,
+        "isBuildCommand": false
     }, {
         "taskName": "gulp",
         "command": "gulp",

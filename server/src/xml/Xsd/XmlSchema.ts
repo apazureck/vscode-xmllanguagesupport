@@ -1,9 +1,9 @@
-
 import { IAttribute } from "../Attribute";
 import { IXmlBase } from "../base";
 import { IElement } from "../Element";
 import { XmlParser } from "../xmlparser";
-import { IXsdType, SchemaError } from "./Xsd";
+import { SchemaError } from "./SchemaError";
+import { IXsdType } from "./Xsd";
 import { XsdComplexType } from "./XsdComplexType";
 import { XsdSimpleType } from "./XsdSimpleType";
 
@@ -33,7 +33,7 @@ export class XmlSchema {
     }
 
     public getContent(schema: IElement): void {
-        this.content = schema.children.filter(x => !x.isClosingTag).map(x => XmlSchema.createElement(x));
+        this.content = schema.children.map(x => XmlSchema.createElement(x));
     }
 
     /**

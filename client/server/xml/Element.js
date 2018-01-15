@@ -42,11 +42,13 @@ class Element {
                 parent.setClosingTag(this);
                 parent.setBody(match.input.substring(parent.end, this.start));
             }
+            else {
+                parent.children.push(this);
+            }
             this.setXPath(parent);
             this.predecessor = parent.children[parent.children.length - 1];
             if (this.predecessor)
                 this.predecessor.setSuccessor(this);
-            parent.children.push(this);
             for (const ns in parent.knownNamespaces) {
                 if (ns) {
                     this.knownNamespaces[ns] = parent.knownNamespaces[ns];
